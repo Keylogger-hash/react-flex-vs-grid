@@ -12,18 +12,20 @@ export default function Home() {
           Aside
         </div>
         <div className={styles.article}>
-
+          <div className={styles.article_text}>
+            Article
+          </div>
           <div className={styles.image_block}>
             <div className={styles.image_item}>
               Image
             </div>
-            <div className={styles.image_item}>
+            <div  className={styles.image_item}>
+              Image
+            </div >
+            <div  className={styles.image_item}>
               Image
             </div>
-            <div className={styles.image_item}>
-              Image
-            </div>
-          </div>
+          </div>    
         </div>
       </div>
       <div className={styles.footer}>
