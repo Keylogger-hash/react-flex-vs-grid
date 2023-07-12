@@ -11,7 +11,7 @@ export default function GridDifferentColumns(){
             <div className={`${styles.grid_item} ${styles.box3}`}>
                 Image 3
             </div>
-            <div className={`${styles.grid_item}`}>
+            <div className={`${styles.grid_item} ${styles.box4}`}>
                 Image 4
             </div>
             <div className={`${styles.grid_item} ${styles.box5}`}>
@@ -29,24 +29,6 @@ export default function GridDifferentColumns(){
             <div className={`${styles.grid_item} ${styles.box9}`}>
                 Image 9
             </div>
-            {/* <div className={styles.grid_item}>
-                4
-            </div>
-            <div className={styles.grid_item}>
-                5
-            </div>
-            <div className={styles.grid_item}>
-                6
-            </div>
-            <div className={styles.grid_item}>
-                7
-            </div>
-            <div className={styles.grid_item}>
-                8
-            </div>
-            <div className={styles.grid_item}>
-                9
-            </div> */}
         </div>
     )
 }

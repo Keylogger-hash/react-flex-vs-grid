@@ -1,48 +1,28 @@
 import { ReactElement } from 'react'
-import { useState } from 'react';
 import styles from './page.module.css'
-import GridElement from './grid';
+import {IGridElementProps,GridElement} from '../Components/GridItem/grid';
+function InitializeArray():number[]{
+    return Array.from(Array(9).keys()).map(x=>x+1)
+}
 
 export default function Grid(){
     let count = 0;
+    let numbersArray = InitializeArray();
 
-    let gridArray:ReactElement[] = new Array(9);
-    for(let i:number=2;i<11;i++){
-        gridArray.push(
-            <GridElement ></GridElement>
+    const gridArray:ReactElement[] = numbersArray.map((number)=>{
+        const props: IGridElementProps = {
+            Count:number
+        }
+        return (
+            <GridElement {...props} key={number}/>
         )
-        console.log(count)
-    }   
+        }
+    );
     return (
-        <div className={styles.grid_wrapper}>
-            {gridArray}
-            {/* <div>
-                Image
+        <div className={styles.grid_content}>
+            <div className={styles.grid_wrapper}>
+                {gridArray}
             </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div>
-            <div>
-                Image
-            </div> */}
         </div>
     )
 }
