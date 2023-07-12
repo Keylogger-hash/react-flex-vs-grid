@@ -19,10 +19,13 @@ export default function Grid(){
         }
     );
     return (
-        <div className={styles.grid_content}>
-            <div className={styles.grid_wrapper}>
-                {gridArray}
+        <div className={styles.grid_main}>
+            <div className={styles.grid_content}>
+                <div className={styles.grid_wrapper}>
+                    {gridArray}
+                </div>
             </div>
         </div>
+
     )
 }
